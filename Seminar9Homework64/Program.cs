@@ -18,3 +18,16 @@ void Print(string[] args)// метод вывода на печать
 }
 
 Print(args);
+
+
+// === ИЛИ ===
+
+int Numbers(int n)
+{
+    if (n/10 != 0) return Numbers(n / 10) + 1;
+    else return 1;
+}
+Console.WriteLine("Input number");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Numbers(n));
